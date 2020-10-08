@@ -1,6 +1,6 @@
 This page is under construction.
 
-#### Alex Nieva
+## Alex Nieva
 
 Master of Arts in Music Technology, Schulich School of Music, McGill University, Montréal, Québec.
 

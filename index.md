@@ -1,5 +1,5 @@
- <p>This page is under construction.</p>
+This page is under construction.
 
-<p>Alex Nieva<br>
-  Master of Arts in Music Technology<br>
-  Master of Science in Electrical Engineering</p>
+###Alex Nieva
+Master of Arts in Music Technology
+Master of Science in Electrical Engineering

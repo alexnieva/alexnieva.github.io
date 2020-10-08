@@ -1,12 +1,5 @@
-<!doctype html>
-<html>
-  <head>
-    <title>This is the title of the webpage!</title>
-  </head>
-  <body>
-    <p>This page is under construction.</p>
-  </body>
-</html>
+ <p>This page is under construction.</p>
 
-Master of Arts in Music Technology
-Master of Science in Electrical Engineering
+<p>Alex Nieva<br>
+  Master of Arts in Music Technology</p>
+<p>Master of Science in Electrical Engineering</p>

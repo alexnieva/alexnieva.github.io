@@ -7,3 +7,6 @@
     <p>This page is under construction.</p>
   </body>
 </html>
+
+Master of Arts in Music Technology
+Master of Science in Electrical Engineering

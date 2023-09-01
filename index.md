@@ -1,6 +1,6 @@
 ## Alex Nieva
 
-I work as a Research Agent at the International Laboratory for Brain, Music, and Sound Research [BRAMS](https://brams.org/) in Montréal, QC. 
+I work as a Research Agent at the International Laboratory for Brain, Music, and Sound Research ([BRAMS](https://brams.org/)) in Montréal, QC. 
 
 I hold a Master of Arts in Music Technology, Schulich School of Music, McGill University, and a Master of Science in Electrical Engineering, Northeastern University.
 

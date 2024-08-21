@@ -4,4 +4,4 @@ I work as a Research Agent at the International Laboratory for Brain, Music, and
 
 I hold a Master of Arts in Music Technology, Schulich School of Music, McGill University, and a Master of Science in Electrical Engineering, Northeastern University.
 
-Previously, I have worked as a sound tech at the Banff Centre for Arts and Creativity, as a software developer at an extinct cool startup - Upscale Technology, Researcher and Instructor in Music Technology at McGill University, Lab Manager for a Nuclear Magnetic Resonator, among other things.
+Previously, I have worked as a sound tech at the Banff Centre for Arts and Creativity, as a software developer at an extinct cool startup - Upscale Technology, as a Researcher and Instructor in Music Technology at McGill University, as a Lab Manager for a Nuclear Magnetic Resonator, among other things.

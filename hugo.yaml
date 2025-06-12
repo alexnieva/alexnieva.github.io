@@ -3,6 +3,19 @@ languageCode: en-us
 title: Alex Nieva's Site
 theme: hugo-profile
 
+Menus:
+  # main:
+  #   - identifier: blog
+  #     name: Blog
+  #     title: Blog posts
+  #     url: /blogs
+  #     weight: 1
+  #   - identifier: gallery
+  #     name: Gallery
+  #     title: Gallery of picture
+  #     url: /gallery
+  #     weight: 2
+
 params:
   title: "Alex Nieva"
   description: Text about my cool site
@@ -144,26 +157,26 @@ params:
     #   messageRows: 5
 
   # Education
-#   education:
-#     enable: true
-#     # title: "Custom Name"
-#     index: false
-#     items:
-#       - title: "Master of Arts in Music Technology"
-#         school:
-#           name: "McGill University, Montreal"
-#           url: "https://www.mcgill.ca/music/about-us/music-technology"
-#         date: "2015 - 2018"
-# #        GPA: "3.8 out of 5.0"
-# #        content: |-
-# #          Extracurricular Activities
-# #            - Lorem ipsum dolor sit amet consectetur adipisicing elit.
-# #            - Tempora esse, eaque delectus nulla quo doloribus itaque expedita alias natus optio totam maxime nihil excepturi velit a animi laborum hic similique.
-#       - title: "Master of Science in Electrical Engineering"
-#         school:
-#           name: "Northeastern University"
-#           url: "https://example.org"
-#         date: "2000 - 2003"
+  education:
+    enable: true
+    # title: "Custom Name"
+    index: false
+    items:
+      - title: "Master of Arts in Music Technology"
+        school:
+          name: "McGill University, Montreal"
+          url: "https://www.mcgill.ca/music/about-us/music-technology"
+        date: "2015 - 2018"
+#        GPA: "3.8 out of 5.0"
+#        content: |-
+#          Extracurricular Activities
+#            - Lorem ipsum dolor sit amet consectetur adipisicing elit.
+#            - Tempora esse, eaque delectus nulla quo doloribus itaque expedita alias natus optio totam maxime nihil excepturi velit a animi laborum hic similique.
+      - title: "Master of Science in Electrical Engineering"
+        school:
+          name: "Northeastern University, Boston"
+          url: "https://ece.northeastern.edu/"
+        date: "2000 - 2003"
 #        GPA: "3.9 out of 5.0"
 # #        content: |-
 # #          I Publiced two papers in the ACM SIGCHI Conference on Artificial Intelligence.

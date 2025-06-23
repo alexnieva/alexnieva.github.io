@@ -168,7 +168,9 @@ params:
           url: "https://www.mcgill.ca/music/about-us/music-technology"
         date: "2015 - 2018"
 #        GPA: "3.8 out of 5.0"
-#        content: |-
+        content: |-
+            Built Digital Musical Instruments.
+            - The T-Stick
 #          Extracurricular Activities
 #            - Lorem ipsum dolor sit amet consectetur adipisicing elit.
 #            - Tempora esse, eaque delectus nulla quo doloribus itaque expedita alias natus optio totam maxime nihil excepturi velit a animi laborum hic similique.
@@ -178,10 +180,10 @@ params:
           url: "https://ece.northeastern.edu/"
         date: "2000 - 2003"
 #        GPA: "3.9 out of 5.0"
-# #        content: |-
-# #          I Publiced two papers in the ACM SIGCHI Conference on Artificial Intelligence.
-# #          - [Fast and Accurate Object Detection with a Single Convolutional Neural Network](https://example.com)
-# #          - Face mask detection using a single convolutional neural network.
+        content: |-
+            I studied the interaction of ultrasound and scattered light for medical imaging.
+            - [Fast and Accurate Object Detection with a Single Convolutional Neural Network](https://example.com)
+            - Face mask detection using a single convolutional neural network.
 # #
 # #          Extracurricular Activities
 # #            - Lorem ipsum dolor sit amet consectetur adipisicing elit.

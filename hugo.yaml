@@ -169,7 +169,7 @@ params:
         date: "2015 - 2018"
 #        GPA: "3.8 out of 5.0"
         content: |-
-            Built Digital Musical Instruments.
+            Built Digital Musical Instruments and studied musical performance with motion capture systems.
             - The T-Stick
 #          Extracurricular Activities
 #            - Lorem ipsum dolor sit amet consectetur adipisicing elit.
@@ -181,9 +181,8 @@ params:
         date: "2000 - 2003"
 #        GPA: "3.9 out of 5.0"
         content: |-
-            I studied the interaction of ultrasound and scattered light for medical imaging.
-            - [Fast and Accurate Object Detection with a Single Convolutional Neural Network](https://example.com)
-            - Face mask detection using a single convolutional neural network.
+            I studied the interaction of ultrasound and near infrared scattered light for medical imaging.
+
 # #
 # #          Extracurricular Activities
 # #            - Lorem ipsum dolor sit amet consectetur adipisicing elit.

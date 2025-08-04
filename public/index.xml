@@ -2,17 +2,17 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Alex Nieva&#39;s Site</title>
-    <link>https://alexnieva.github.io/</link>
+    <link>http://localhost:1313/</link>
     <description>Recent content on Alex Nieva&#39;s Site</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <lastBuildDate>Fri, 13 Jun 2025 15:13:34 -0400</lastBuildDate>
-    <atom:link href="https://alexnieva.github.io/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="http://localhost:1313/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Biking</title>
-      <link>https://alexnieva.github.io/biking/</link>
+      <link>http://localhost:1313/biking/</link>
       <pubDate>Fri, 13 Jun 2025 15:13:34 -0400</pubDate>
-      <guid>https://alexnieva.github.io/biking/</guid>
+      <guid>http://localhost:1313/biking/</guid>
       <description>I bike in Montreal all year long. Rain, snow, sunshine, gothic looking day, it does not matter. I have never bought a brand new bike, all my bikes have been either refurbished or fixed by myself. Real pictures to come&amp;hellip;</description>
     </item>
   </channel>

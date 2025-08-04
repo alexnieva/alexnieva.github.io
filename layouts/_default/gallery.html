@@ -1,0 +1,175 @@
+{{ define "head" }}
+<meta name="description" content="{{ .Title }} of {{ .Site.Title }}">
+<!-- Load ViewerJS from CDN instead of static files -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/viewerjs/1.11.6/viewer.min.css">
+<script src="https://cdnjs.cloudflare.com/ajax/libs/viewerjs/1.11.6/viewer.min.js"></script>
+<style>
+/* Custom gallery styles for better image scaling */
+.gallery-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 20px;
+    padding: 20px 0;
+}
+
+.gallery-item {
+    position: relative;
+    overflow: hidden;
+    border-radius: 10px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    cursor: pointer;
+    aspect-ratio: 1 / 1; /* Perfect squares */
+}
+
+.gallery-item:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 25px rgba(0,0,0,0.15);
+}
+
+.gallery-image {
+    width: 100%;
+    height: 100%; /* Full height for perfect squares */
+    aspect-ratio: 1 / 1; /* Force square aspect ratio */
+    object-fit: cover; /* Crop to fit square */
+    transition: transform 0.3s ease;
+}
+
+.gallery-item:hover .gallery-image {
+    transform: scale(1.05);
+}
+
+/* Overlay effect */
+.gallery-item::after {
+    content: '🔍';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background: rgba(0, 0, 0, 0.7);
+    color: white;
+    padding: 12px;
+    border-radius: 50%;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+    font-size: 18px;
+    pointer-events: none;
+}
+
+.gallery-item:hover::after {
+    opacity: 1;
+}
+
+/* Responsive adjustments for squares */
+@media (max-width: 768px) {
+    .gallery-container {
+        grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+        gap: 15px;
+    }
+}
+
+@media (max-width: 480px) {
+    .gallery-container {
+        grid-template-columns: repeat(2, 1fr); /* Always 2 columns on mobile */
+        gap: 10px;
+    }
+}
+</style>
+{{ end }}
+
+{{ define "title" }}
+{{.Title }} | {{ .Site.Title }}
+{{ end }}
+
+{{ define "main" }}
+<div class="container pt-5" id="gallery-page">
+    <h2 class="text-center pb-2">{{.Title}}</h2>
+    <h6 class="text-center">{{ .Params.description | emojify }}</h6>
+    
+    <!-- Content section -->
+    <div class="row p-4">
+        {{ .Content | emojify }}
+    </div>
+    
+    <!-- Gallery section -->
+    {{ if .Params.galleryImages }}
+    <div class="gallery-container" id="image-gallery">
+        {{ range $index, $image := .Params.galleryImages }}
+        <div class="gallery-item">
+            <img class="gallery-image" 
+                 src="{{ $image.thumb | default $image.src }}" 
+                 data-original="{{ $image.full | default $image.src }}"
+                 alt="{{ $image.alt | default (printf "Gallery image %d" (add $index 1)) }}"
+                 data-title="{{ $image.title | default "" }}"
+                 loading="lazy">
+        </div>
+        {{ end }}
+    </div>
+    {{ end }}
+</div>
+
+{{ if .Params.viewer | default true }}
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+    const gallery = document.getElementById('image-gallery');
+    if (gallery) {
+        // Enhanced ViewerJS options for better scaling
+        const viewerOptions = {
+            navbar: true,
+            toolbar: {
+                zoomIn: true,
+                zoomOut: true,
+                oneToOne: true,
+                reset: true,
+                prev: true,
+                next: true,
+                rotateLeft: true,
+                rotateRight: true,
+            },
+            movable: true,
+            zoomable: true,
+            rotatable: true,
+            scalable: true,
+            transition: true,
+            fullscreen: true,
+            keyboard: true,
+            loop: true,
+            minZoomRatio: 0.1,   // Allow zooming out to 10%
+            maxZoomRatio: 10,    // Allow zooming in to 1000%
+            zoomRatio: 1,        // Start at 100%
+            zoomOnWheel: true,   // Mouse wheel zoom
+            zoomOnTouch: true,   // Pinch to zoom
+            slideOnTouch: true,  // Swipe to navigate
+            toggleOnDblclick: true, // Double-click to toggle
+            tooltip: true,       // Show zoom percentage
+            // Merge with custom options from front matter
+            {{ if .Params.viewerOptions }}
+            {{ range $key, $value := .Params.viewerOptions }}
+            {{ $key }}: {{ $value }},
+            {{ end }}
+            {{ end }}
+        };
+        
+        // Initialize viewer with full-size images
+        const images = gallery.querySelectorAll('.gallery-image');
+        const fullSizeUrls = Array.from(images).map(img => img.dataset.original || img.src);
+        
+        const viewer = new Viewer(gallery, {
+            ...viewerOptions,
+            url(image) {
+                return image.dataset.original || image.src;
+            }
+        });
+        
+        // Optional: Add click handlers for better UX
+        const galleryItems = gallery.querySelectorAll('.gallery-item');
+        galleryItems.forEach((item, index) => {
+            item.addEventListener('click', function() {
+                viewer.view(index);
+            });
+        });
+    }
+});
+</script>
+{{ end }}
+{{ end }}

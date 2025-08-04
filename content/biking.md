@@ -43,4 +43,4 @@ viewerOptions :
 
 
 
-I bike in Montreal all year long. Rain, snow, sunshine, gothic looking day, it does not matter. I have never bought a brand new bike, all my bikes have been either refurbished or fixed by myself. Real pictures to come...
+I bike in Montreal all year long. Rain, snow, sunshine, gothic looking day, it does not matter. I have never bought a brand new bike, all my bikes have been either refurbished or fixed by myself.
